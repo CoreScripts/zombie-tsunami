@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#10150e">
+<link rel="icon" href="data:,">
+<base href="https://rawcdn.githack.com/CoreScripts/zombie-tsunami/main/">
+<title>Zombie Tsunami</title>
+<link rel="stylesheet" href="https://rawcdn.githack.com/CoreScripts/zombie-tsunami/main/style.css">
+</head>
+<body>
+<main id="game">
+  <canvas id="canvas" width="960" height="640" aria-label="Zombie Tsunami. Tap and hold to jump."></canvas>
+  <div id="welcome" aria-label="Loading Zombie Tsunami">
+    <div class="loading-screen">
+      <div class="loading-art"><img src="https://rawcdn.githack.com/CoreScripts/zombie-tsunami/main/loading-art.png" alt="Zombie Tsunami" draggable="false"></div>
+      <div class="loading-ui">
+        <progress id="progress" max="100" value="0" aria-label="Loading progress"></progress>
+        <p id="status" class="loading-status" role="status" aria-live="polite">Loading Zombie Tsunami</p>
+      </div>
+    </div>
+    <button id="start" hidden>Play</button>
+  </div>
+</main>
+<nav aria-label="Browser controls" hidden>
+  <button id="sound" aria-pressed="false">Sound on</button>
+  <button id="fullscreen">Fullscreen</button>
+  <button id="export-save">Export save</button>
+  <button id="diagnostics">Details</button>
+</nav>
+<aside id="debug" hidden>
+  <button id="close-debug">Close</button>
+  <div id="stats"></div>
+  <pre id="log"></pre>
+</aside>
+<script src="https://rawcdn.githack.com/CoreScripts/zombie-tsunami/main/engine.js"></script>
+<script src="https://rawcdn.githack.com/CoreScripts/zombie-tsunami/main/port.js"></script>
+<script src="https://rawcdn.githack.com/CoreScripts/zombie-tsunami/main/fmod/fmodstudio.js"></script>
+<script src="https://rawcdn.githack.com/CoreScripts/zombie-tsunami/main/audio.js"></script>
+<script src="https://rawcdn.githack.com/CoreScripts/zombie-tsunami/main/saves.js"></script>
+<script src="https://rawcdn.githack.com/CoreScripts/zombie-tsunami/main/timing.js"></script>
+<script src="https://rawcdn.githack.com/CoreScripts/zombie-tsunami/main/app.js"></script>
+</body>
+</html>
